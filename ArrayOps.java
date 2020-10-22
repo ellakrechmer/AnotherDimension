@@ -1,4 +1,5 @@
 public class ArrayOps {
+  //part 4
   public static int sum(int[] arr){
     int sum=0;
     for (int i =0; i<arr.length; i++) {
@@ -33,5 +34,15 @@ public class ArrayOps {
       sum+=sum(arr[i]);
     }
     return sum;
+  }
+  //part 5
+  public static int[] sumCols(int[][] matrix) {
+    int[] arr=new int[matrix[0].length];
+    for (int i=0; i<matrix[0].length; i++) {
+      for (int j=0; j<matrix.length; j++) {
+        arr[i]=sum(matrix[j]);
+      }
+    }
+    return arr;
   }
 }

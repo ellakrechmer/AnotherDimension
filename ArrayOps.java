@@ -45,4 +45,16 @@ public class ArrayOps {
     }
     return arr;
   }
+  public static boolean isRowMagic(int[][] matrix) {
+    int first=sum(matrix[0]);
+    boolean magicRow=false;
+    for (int i=1; i<matrix.length; i++) {
+      if (sum(matrix[i])==first) magicRow=true;
+      else {
+        magicRow=false;
+        break;
+      }
+    }
+    return magicRow;
+  }
 }

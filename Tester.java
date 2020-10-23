@@ -14,6 +14,8 @@ public class Tester {
                  { 3,  3, 3 } };
     int[][] E={ {  2,  2, 2 },
                 {  2, 2, 2 } };
+    int[][] F={ {  2, 4, 2 },
+                {  2, 2, 2 }};
     //part 4
     //a
     System.out.println(ArrayOps.sum(B));
@@ -37,5 +39,8 @@ public class Tester {
     System.out.println(ArrayOps.isColumnMagic(C));
     System.out.println(ArrayOps.isColumnMagic(D));
     System.out.println(ArrayOps.isColumnMagic(E));
+    //d
+    System.out.println(ArrayOps.isLocationMagic(F, 0, 1));
+    System.out.println(ArrayOps.isLocationMagic(F, 1, 1));
   }
 }

@@ -57,4 +57,16 @@ public class ArrayOps {
     }
     return magicRow;
   }
+  public static boolean isColumnMagic(int[][] matrix) {
+    int first=sumCols(matrix)[0];
+    boolean magicColumn=false;
+    for (int i=1; i<matrix[0].length; i++) {
+      if (sumCols(matrix)[i]==first) magicColumn=true;
+      else {
+        magicColumn=false;
+        break;
+      }
+    }
+    return magicColumn;
+  }
 }
